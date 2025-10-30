@@ -1,6 +1,6 @@
 import os
 import nacho
-import jose
+import funciones_alumnos as func
 
 
 def menu():
@@ -33,11 +33,11 @@ def main():
         ##os.system("cls" if os.name == "nt" else "clear")
         match opc:
             case "1":  # Listar productos
-                jose.listar(alumnos)
+                func.mostrar_lista(alumnos)
             case "2":  # Añadir productos al carrito
-                jose.agregar(alumnos)
+                func.agregar_alumno(alumnos)
             case "3":  # Eliminar productos del carrito
-                jose.buscar(alumnos)
+                func.buscar_alumno(alumnos)
             case "4":  # Formalizar compra
                 nacho.estadisticas(alumnos)
             case "0":
